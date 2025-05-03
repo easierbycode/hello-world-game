@@ -11,50 +11,82 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "bb2d413c-02b3-404d-b1c0-cf46ce1e7f07",
-            "label": "fufuSuperDino",
-            "components": [
-                "PushOnClick"
-            ],
-            "texture": {
-                "key": "FufuSuperDino"
-            },
-            "x": 400,
-            "y": 235,
-            "ArcadeComponent.active": true,
-            "body.velocity.x": 100,
-            "body.velocity.y": 100,
-            "body.bounce.x": 1,
-            "body.bounce.y": 1,
-            "collideWorldBounds": true,
-            "bodyGeometry": 0,
-            "radius": 91,
-            "body.width": 128,
-            "body.height": 128,
-            "body.offset.x": 31,
-            "body.offset.y": 31
-        },
-        {
-            "type": "Image",
-            "id": "f620e145-a659-44d6-a6c3-467423fe560a",
-            "label": "barbarian",
-            "components": [],
-            "texture": {
-                "key": "barbarian"
-            },
-            "x": 220,
-            "y": 192,
-            "ArcadeComponent.active": true,
-            "body.velocity.x": -200,
-            "body.velocity.y": 200,
-            "body.bounce.x": 1,
-            "body.bounce.y": 1,
-            "collideWorldBounds": true,
-            "body.width": 144,
-            "body.height": 213,
-            "body.offset.x": 89,
-            "body.offset.y": 54
+            "type": "Container",
+            "id": "3cec9649-75e7-465c-b526-b6aaa5783cde",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "NineSlice",
+                    "id": "88f90704-ef10-4daf-ab0f-87d2873a40ad",
+                    "label": "nineslice_1",
+                    "texture": {
+                        "key": "panel"
+                    },
+                    "originX": 0,
+                    "originY": 0,
+                    "width": 800,
+                    "height": 600,
+                    "leftWidth": 32,
+                    "rightWidth": 32,
+                    "topHeight": 32,
+                    "bottomHeight": 32
+                },
+                {
+                    "type": "Image",
+                    "id": "f620e145-a659-44d6-a6c3-467423fe560a",
+                    "label": "barbarian",
+                    "texture": {
+                        "key": "barbarian"
+                    },
+                    "x": 220,
+                    "y": 192,
+                    "ArcadeComponent.active": true,
+                    "body.velocity.x": -200,
+                    "body.velocity.y": 200,
+                    "body.bounce.x": 1,
+                    "body.bounce.y": 1,
+                    "collideWorldBounds": true,
+                    "body.width": 144,
+                    "body.height": 213,
+                    "body.offset.x": 89,
+                    "body.offset.y": 54
+                },
+                {
+                    "type": "Image",
+                    "id": "bb2d413c-02b3-404d-b1c0-cf46ce1e7f07",
+                    "label": "fufuSuperDino",
+                    "components": [
+                        "PushOnClick"
+                    ],
+                    "texture": {
+                        "key": "FufuSuperDino"
+                    },
+                    "x": 400,
+                    "y": 235,
+                    "ArcadeComponent.active": true,
+                    "body.velocity.x": 100,
+                    "body.velocity.y": 100,
+                    "body.bounce.x": 1,
+                    "body.bounce.y": 1,
+                    "collideWorldBounds": true,
+                    "bodyGeometry": 0,
+                    "radius": 91,
+                    "body.width": 128,
+                    "body.height": 128,
+                    "body.offset.x": 31,
+                    "body.offset.y": 31,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "6a247620-a139-4f90-bc03-c5276b922538",
+                            "label": "glowFx",
+                            "color": "#fafcfe",
+                            "outerStrength": 1,
+                            "preFX": true
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "plainObjects": [
@@ -71,6 +103,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }
