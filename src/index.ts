@@ -16,26 +16,29 @@ class Boot extends Phaser.Scene {
 
     create() {
 
-       this.scene.start("Preload");
+        this.scene.start("Preload");
     }
 }
 
 window.addEventListener('load', function () {
-	
-	const game = new Phaser.Game({
-		width: 800,
-		height: 600,
-		backgroundColor: "#2f2f2f",
-		scale: {
-			mode: Phaser.Scale.ScaleModes.FIT,
-			autoCenter: Phaser.Scale.Center.CENTER_BOTH
-		},
+
+    const game = new Phaser.Game({
+        width: 800,
+        height: 600,
+        backgroundColor: "#2f2f2f",
+        scale: {
+            mode: Phaser.Scale.ScaleModes.FIT,
+            autoCenter: Phaser.Scale.Center.CENTER_BOTH
+        },
         physics: {
             default: "arcade",
-        },
-		scene: [Boot, Preload, Level]
-	});
+            arcade: {
+                debug: new URL(window.location.href).searchParams.get("debug") == "1"
+            }
+            },
+            scene: [Boot, Preload, Level]
+        });
 
-	game.scene.start("Boot");
+    game.scene.start("Boot");
 
 });
