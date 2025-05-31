@@ -11,94 +11,26 @@
     },
     "displayList": [
         {
-            "type": "Container",
-            "id": "3cec9649-75e7-465c-b526-b6aaa5783cde",
-            "label": "container_1",
+            "type": "Layer",
+            "id": "bb9ef552-03ff-4157-944d-e14e4cd2c874",
+            "label": "background",
             "list": [
                 {
-                    "type": "NineSlice",
-                    "id": "88f90704-ef10-4daf-ab0f-87d2873a40ad",
-                    "label": "nineslice_1",
+                    "type": "TileSprite",
+                    "id": "20981add-641b-4f32-b11a-e7cf2a86ce0b",
+                    "label": "tilesprite_1",
                     "texture": {
-                        "key": "panel"
+                        "key": "stage3_tileset"
                     },
                     "originX": 0,
                     "originY": 0,
-                    "width": 800,
-                    "height": 600,
-                    "leftWidth": 32,
-                    "rightWidth": 32,
-                    "topHeight": 32,
-                    "bottomHeight": 32
-                },
-                {
-                    "type": "Image",
-                    "id": "f620e145-a659-44d6-a6c3-467423fe560a",
-                    "label": "barbarian",
-                    "texture": {
-                        "key": "barbarian"
-                    },
-                    "x": 220,
-                    "y": 192,
-                    "ArcadeComponent.active": true,
-                    "body.velocity.x": -200,
-                    "body.velocity.y": 200,
-                    "body.bounce.x": 1,
-                    "body.bounce.y": 1,
-                    "collideWorldBounds": true,
-                    "body.width": 144,
-                    "body.height": 213,
-                    "body.offset.x": 89,
-                    "body.offset.y": 54
-                },
-                {
-                    "type": "Image",
-                    "id": "bb2d413c-02b3-404d-b1c0-cf46ce1e7f07",
-                    "label": "fufuSuperDino",
-                    "components": [
-                        "PushOnClick"
-                    ],
-                    "texture": {
-                        "key": "FufuSuperDino"
-                    },
-                    "x": 400,
-                    "y": 235,
-                    "ArcadeComponent.active": true,
-                    "body.velocity.x": 100,
-                    "body.velocity.y": 100,
-                    "body.bounce.x": 1,
-                    "body.bounce.y": 1,
-                    "collideWorldBounds": true,
-                    "bodyGeometry": 0,
-                    "radius": 91,
-                    "body.width": 128,
-                    "body.height": 128,
-                    "body.offset.x": 31,
-                    "body.offset.y": 31,
-                    "list": [
-                        {
-                            "type": "Glow",
-                            "id": "6a247620-a139-4f90-bc03-c5276b922538",
-                            "label": "glowFx",
-                            "color": "#fafcfe",
-                            "outerStrength": 1,
-                            "preFX": true
-                        }
-                    ]
+                    "width": 5216,
+                    "height": 736
                 }
             ]
         }
     ],
-    "plainObjects": [
-        {
-            "id": "2c3c78a1-7aed-4110-a6c4-e60a3784948d",
-            "type": "Collider",
-            "label": "collider",
-            "scope": "METHOD",
-            "object1": "fufuSuperDino",
-            "object2": "barbarian"
-        }
-    ],
+    "plainObjects": [],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
