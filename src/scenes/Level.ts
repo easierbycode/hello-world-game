@@ -3,6 +3,7 @@
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
+import EnablePhysicsBodyScript from "../scriptnodes/EnablePhysicsBodyScript";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
@@ -33,15 +34,33 @@ export default class Level extends Phaser.Scene {
 		const fufuSuperDino = this.add.sprite(1017, 449, "FufuSuperDino");
 		background.add(fufuSuperDino);
 
-		// rectangle_1
-		const rectangle_1 = this.add.rectangle(0, 569, 1280, 96);
-		rectangle_1.scaleY = 0.2235006528202375;
-		rectangle_1.setOrigin(0, 0);
-		rectangle_1.isFilled = true;
-		background.add(rectangle_1);
-
 		// ground
-		this.add.layer();
+		const ground = this.add.layer();
+
+		// floor_1
+		const floor_1 = this.add.rectangle(0, 569, 1280, 96);
+		floor_1.scaleY = 0.2235006528202375;
+		floor_1.setOrigin(0, 0);
+		floor_1.visible = false;
+		floor_1.isFilled = true;
+		floor_1.fillColor = 3016250;
+		floor_1.strokeColor = 0;
+		ground.add(floor_1);
+
+		// enablePhysicsBodyScript
+		new EnablePhysicsBodyScript(floor_1);
+
+		// wall
+		const wall = this.add.rectangle(0, 150, 32, 416);
+		wall.setOrigin(0, 0);
+		wall.visible = false;
+		wall.isFilled = true;
+		wall.fillColor = 3016250;
+		wall.strokeColor = 0;
+		ground.add(wall);
+
+		// enablePhysicsBodyScript_1
+		new EnablePhysicsBodyScript(wall);
 
 		// elements
 		this.add.layer();

@@ -39,25 +39,58 @@
                     },
                     "x": 1017,
                     "y": 449
-                },
-                {
-                    "type": "Rectangle",
-                    "id": "f8d99662-52ef-4495-9216-beafb363ee5b",
-                    "label": "rectangle_1",
-                    "y": 569,
-                    "scaleY": 0.2235006528202375,
-                    "originX": 0,
-                    "originY": 0,
-                    "isFilled": true,
-                    "width": 1280,
-                    "height": 96
                 }
             ]
         },
         {
             "type": "Layer",
             "id": "4f540103-edab-4f2c-a83c-1674ce9b09d3",
-            "label": "ground"
+            "label": "ground",
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "6806e651-b0ac-4ae9-9220-ef014fa3373f",
+                    "label": "floor_1",
+                    "y": 569,
+                    "scaleY": 0.2235006528202375,
+                    "originX": 0,
+                    "originY": 0,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#2e063a",
+                    "strokeColor": "#000",
+                    "width": 1280,
+                    "height": 96,
+                    "list": [
+                        {
+                            "prefabId": "625e78db-c078-46d2-98a7-cb0b8f1ae03c",
+                            "id": "8056a4f7-330c-41fc-9182-8f8092b75f55",
+                            "label": "enablePhysicsBodyScript"
+                        }
+                    ]
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "7c9f7c0b-b3eb-48ee-9b05-8323805ba955",
+                    "label": "wall",
+                    "y": 150,
+                    "originX": 0,
+                    "originY": 0,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#2e063a",
+                    "strokeColor": "#000",
+                    "width": 32,
+                    "height": 416,
+                    "list": [
+                        {
+                            "prefabId": "625e78db-c078-46d2-98a7-cb0b8f1ae03c",
+                            "id": "8608457b-5e62-47fe-88fe-989d314c6c69",
+                            "label": "enablePhysicsBodyScript_1"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Layer",
