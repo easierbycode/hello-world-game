@@ -33,6 +33,13 @@ export default class Level extends Phaser.Scene {
 		const fufuSuperDino = this.add.sprite(1017, 449, "FufuSuperDino");
 		background.add(fufuSuperDino);
 
+		// rectangle_1
+		const rectangle_1 = this.add.rectangle(0, 569, 1280, 96);
+		rectangle_1.scaleY = 0.2235006528202375;
+		rectangle_1.setOrigin(0, 0);
+		rectangle_1.isFilled = true;
+		background.add(rectangle_1);
+
 		// ground
 		this.add.layer();
 
