@@ -78,6 +78,9 @@ export default class Level extends Phaser.Scene {
 		// foreground_2
 		this.add.layer();
 
+		// collider
+		this.physics.add.collider(barbarian, floor_1);
+
 		this.events.emit("scene-awake");
 	}
 

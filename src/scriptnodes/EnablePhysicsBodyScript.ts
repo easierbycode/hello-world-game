@@ -5,6 +5,7 @@
 
 import Phaser from "phaser";
 /* START-USER-IMPORTS */
+import { ScriptNode } from "@phasereditor2d/scripts-core";   // ← this line
 /* END-USER-IMPORTS */
 
 export default class EnablePhysicsBodyScript extends ScriptNode {

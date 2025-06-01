@@ -16,6 +16,7 @@
     "phaser": "^4.0.0-rc.2"
   },
   "devDependencies": {
+    "@phasereditor2d/scripts-core": "^1.1.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^8.1.1",
     "html-webpack-plugin": "^5.5.0",

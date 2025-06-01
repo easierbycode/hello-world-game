@@ -126,7 +126,16 @@
             "label": "foreground_2"
         }
     ],
-    "plainObjects": [],
+    "plainObjects": [
+        {
+            "id": "7649e86c-516b-423a-88c2-8b6a379de10c",
+            "type": "Collider",
+            "label": "collider",
+            "scope": "LOCAL",
+            "object1": "barbarian",
+            "object2": "floor_1"
+        }
+    ],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
