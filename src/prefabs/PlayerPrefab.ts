@@ -1,4 +1,3 @@
-
 // You can write more code here
 
 /* START OF COMPILED CODE */
@@ -14,7 +13,7 @@ export default interface PlayerPrefab {
 
 export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 
-	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
+	constructor(pad: Phaser.Input.Gamepad.Gamepad, scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
 		super(scene, x ?? 0, y ?? 0, texture || "barbarian", frame);
 
 		this.scaleX = 0.5;
@@ -22,24 +21,15 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 		scene.physics.add.existing(this, false);
 		this.body.setSize(320, 320, false);
 
-		// leftKey
-		const leftKey = this.scene.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
-
-		// rightKey
-		const rightKey = this.scene.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
-
-		this.leftKey = leftKey;
-		this.rightKey = rightKey;
+		this.pad = pad;
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
 		this.body.setSize(150, 210, false);
 		this.body.setOffset(90, 50);
 		/* END-USER-CTR-CODE */
 	}
 
-	private leftKey: Phaser.Input.Keyboard.Key;
-	private rightKey: Phaser.Input.Keyboard.Key;
+	private pad: Phaser.Input.Gamepad.Gamepad;
 
 	/* START-USER-CODE */
 
@@ -49,12 +39,12 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 
 		if (!this.active)  return;
 
-		if (this.leftKey.isDown) {
+		if (this.pad.left) {
 
 			this.setVelocityX(-200);
 			this.setFlipX(true);
 
-		} else if (this.rightKey.isDown) {
+		} else if (this.pad.right) {
 
 			this.setVelocityX(200);
 			this.setFlipX(false);
@@ -72,6 +62,12 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 
 	/* END-USER-CODE */
 }
+
+/* END OF COMPILED CODE */
+
+// You can write more code here
+
+	/* END-USER-CODE */
 
 /* END OF COMPILED CODE */
 

@@ -19,7 +19,7 @@ export default class Level extends Phaser.Scene {
 		/* END-USER-CTR-CODE */
 	}
 
-	editorCreate(): void {
+	editorCreate(pad: Phaser.Input.Gamepad.Gamepad): void {
 
 		// background
 		const background = this.add.layer();
@@ -70,7 +70,7 @@ export default class Level extends Phaser.Scene {
 		const hero = this.add.layer();
 
 		// barbarian
-		const barbarian = new PlayerPrefab(this, 69, 400);
+		const barbarian = new PlayerPrefab(pad, this, 69, 400);
 		barbarian.scaleX = 0.5;
 		barbarian.scaleY = 0.5;
 		hero.add(barbarian);
@@ -104,7 +104,9 @@ export default class Level extends Phaser.Scene {
 	// Write your code here
 
 	create() {
-		this.editorCreate();
+		this.scene.scene.input.gamepad?.once("down", (pad: Phaser.Input.Gamepad.Gamepad, button: Phaser.Input.Gamepad.Button) => {
+			this.editorCreate(pad);
+		});
 	}
 
 	/* END-USER-CODE */
