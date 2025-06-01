@@ -145,6 +145,14 @@
             "scope": "LOCAL",
             "object1": "barbarian",
             "object2": "floor_1"
+        },
+        {
+            "id": "72983755-5844-4f87-9043-2422f51af3a8",
+            "type": "Collider",
+            "label": "collider_1",
+            "scope": "LOCAL",
+            "object1": "barbarian",
+            "object2": "wall"
         }
     ],
     "meta": {
