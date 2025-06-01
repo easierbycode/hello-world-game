@@ -22,14 +22,51 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 		scene.physics.add.existing(this, false);
 		this.body.setSize(320, 320, false);
 
+		// leftKey
+		const leftKey = this.scene.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
+
+		// rightKey
+		const rightKey = this.scene.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
+
+		this.leftKey = leftKey;
+		this.rightKey = rightKey;
+
 		/* START-USER-CTR-CODE */
 		// Write your code here.
+		this.body.setSize(150, 210, false);
+		this.body.setOffset(90, 50);
 		/* END-USER-CTR-CODE */
 	}
+
+	private leftKey: Phaser.Input.Keyboard.Key;
+	private rightKey: Phaser.Input.Keyboard.Key;
 
 	/* START-USER-CODE */
 
 	// Write your code here.
+
+	preUpdate() {
+
+		if (!this.active)  return;
+
+		if (this.leftKey.isDown) {
+
+			this.setVelocityX(-200);
+
+		} else if (this.rightKey.isDown) {
+
+			this.setVelocityX(200);
+
+		} else {
+
+			this.setVelocityX(0);
+		}
+
+		if (this.scene.input.activePointer.isDown) {
+
+			this.setVelocityY(-200);
+		}
+	}
 
 	/* END-USER-CODE */
 }

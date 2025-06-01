@@ -91,24 +91,10 @@ export default class Level extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
-	private cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
-	private readonly CAMERA_SCROLL_SPEED = 10;
-
 	// Write your code here
 
 	create() {
-
 		this.editorCreate();
-
-		this.cursors = this.input.keyboard.createCursorKeys();
-	}
-
-	update() {
-		if (this.cursors.left.isDown) {
-			this.cameras.main.scrollX -= this.CAMERA_SCROLL_SPEED;
-		} else if (this.cursors.right.isDown) {
-			this.cameras.main.scrollX += this.CAMERA_SCROLL_SPEED;
-		}
 	}
 
 	/* END-USER-CODE */
