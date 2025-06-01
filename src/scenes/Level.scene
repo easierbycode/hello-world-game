@@ -138,6 +138,15 @@
             "type": "Layer",
             "id": "01f00938-e29b-4a47-bc55-0e896b49ee1e",
             "label": "foreground_2"
+        },
+        {
+            "prefabId": "490fee92-ec98-4539-b0e0-2d6ae6045bad",
+            "id": "6f1edb50-dd1d-44f3-846a-5c1043f7e7be",
+            "unlock": [
+                "targetGameObject"
+            ],
+            "label": "cameraFollowObjectScript",
+            "targetGameObject": "barbarian"
         }
     ],
     "plainObjects": [

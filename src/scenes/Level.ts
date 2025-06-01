@@ -5,6 +5,7 @@
 import Phaser from "phaser";
 import EnablePhysicsBodyScript from "../scriptnodes/EnablePhysicsBodyScript";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
+import CameraFollowObjectScript from "../scriptnodes/CameraFollowObjectScript";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -83,11 +84,17 @@ export default class Level extends Phaser.Scene {
 		// foreground_2
 		this.add.layer();
 
+		// cameraFollowObjectScript
+		const cameraFollowObjectScript = new CameraFollowObjectScript(this);
+
 		// collider
 		this.physics.add.collider(barbarian, floor_1);
 
 		// collider_1
 		this.physics.add.collider(barbarian, wall);
+
+		// cameraFollowObjectScript (prefab fields)
+		cameraFollowObjectScript.targetGameObject = barbarian;
 
 		this.events.emit("scene-awake");
 	}
