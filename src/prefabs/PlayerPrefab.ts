@@ -52,10 +52,12 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 		if (this.leftKey.isDown) {
 
 			this.setVelocityX(-200);
+			this.setFlipX(true);
 
 		} else if (this.rightKey.isDown) {
 
 			this.setVelocityX(200);
+			this.setFlipX(false);
 
 		} else {
 
