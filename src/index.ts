@@ -31,6 +31,9 @@ window.addEventListener('load', function () {
             mode: Phaser.Scale.ScaleModes.FIT,
             autoCenter: Phaser.Scale.Center.CENTER_BOTH
         },
+        input: {
+            gamepad: true
+        },
         pixelArt: true,
         physics: {
             default: "arcade",
