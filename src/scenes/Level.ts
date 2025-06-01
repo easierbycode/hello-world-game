@@ -70,7 +70,12 @@ export default class Level extends Phaser.Scene {
 
 		// barbarian
 		const barbarian = new PlayerPrefab(this, 69, 400);
+		barbarian.scaleX = 0.5;
+		barbarian.scaleY = 0.5;
 		hero.add(barbarian);
+
+		// enablePhysicsBodyScript_2
+		new EnablePhysicsBodyScript(barbarian);
 
 		// foreground
 		this.add.layer();

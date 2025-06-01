@@ -107,11 +107,22 @@
                     "id": "6bc238bc-1271-4c20-b080-f31aa0ffd1be",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "scaleX",
+                        "scaleY"
                     ],
                     "label": "barbarian",
                     "x": 69,
-                    "y": 400
+                    "y": 400,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5,
+                    "list": [
+                        {
+                            "prefabId": "625e78db-c078-46d2-98a7-cb0b8f1ae03c",
+                            "id": "13de9adb-381f-484f-8ecb-1e5fdb14e699",
+                            "label": "enablePhysicsBodyScript_2"
+                        }
+                    ]
                 }
             ]
         },
