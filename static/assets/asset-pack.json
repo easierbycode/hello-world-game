@@ -7,6 +7,11 @@
                 "key": "barbarian"
             },
             {
+                "url": "assets/ForgottenWorlds-Stage1.png",
+                "type": "image",
+                "key": "ForgottenWorlds-Stage1"
+            },
+            {
                 "url": "assets/FufuSuperDino.png",
                 "type": "image",
                 "key": "FufuSuperDino"
@@ -15,11 +20,6 @@
                 "url": "assets/glassPanel_corners.png",
                 "type": "image",
                 "key": "panel"
-            },
-            {
-                "url": "assets/stage3_tileset.png",
-                "type": "image",
-                "key": "stage3_tileset"
             }
         ]
     },

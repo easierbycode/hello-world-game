@@ -23,9 +23,10 @@ class Boot extends Phaser.Scene {
 window.addEventListener('load', function () {
 
     const game = new Phaser.Game({
-        width: 800,
-        height: 600,
-        backgroundColor: "#2f2f2f",
+        width: 1280,
+        height: 800,
+        //backgroundColor: "#2f2f2f",
+        backgroundColor: "#000000",
         scale: {
             mode: Phaser.Scale.ScaleModes.FIT,
             autoCenter: Phaser.Scale.Center.CENTER_BOTH
@@ -33,7 +34,11 @@ window.addEventListener('load', function () {
         physics: {
             default: "arcade",
             arcade: {
-                debug: new URL(window.location.href).searchParams.get("debug") == "1"
+                debug: new URL(window.location.href).searchParams.get("debug") == "1",
+				gravity: {
+					x: 0,
+					y: 500
+				}
             }
             },
             scene: [Boot, Preload, Level]

@@ -17,17 +17,68 @@
             "list": [
                 {
                     "type": "TileSprite",
-                    "id": "20981add-641b-4f32-b11a-e7cf2a86ce0b",
+                    "id": "22208c48-4dd5-4c0f-a56f-a78f2af77b05",
                     "label": "tilesprite_1",
                     "texture": {
-                        "key": "stage3_tileset"
+                        "key": "ForgottenWorlds-Stage1"
                     },
+                    "y": 152,
+                    "scaleX": 2,
+                    "scaleY": 2,
                     "originX": 0,
                     "originY": 0,
-                    "width": 5216,
-                    "height": 736
+                    "width": 8640,
+                    "height": 224
+                },
+                {
+                    "type": "Sprite",
+                    "id": "7e17d761-da9e-4518-a066-0a5dde189282",
+                    "label": "fufuSuperDino",
+                    "texture": {
+                        "key": "FufuSuperDino"
+                    },
+                    "x": 1017,
+                    "y": 449
                 }
             ]
+        },
+        {
+            "type": "Layer",
+            "id": "4f540103-edab-4f2c-a83c-1674ce9b09d3",
+            "label": "ground"
+        },
+        {
+            "type": "Layer",
+            "id": "52c8728e-0e7b-442c-81b4-a43961755433",
+            "label": "elements"
+        },
+        {
+            "type": "Layer",
+            "id": "f32d6f96-9382-419b-b2d8-f54d289d02a7",
+            "label": "hero",
+            "list": [
+                {
+                    "prefabId": "bd507dd5-57e0-4847-8bb7-b2b1404b6751",
+                    "id": "6bc238bc-1271-4c20-b080-f31aa0ffd1be",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "barbarian",
+                    "x": 69,
+                    "y": 400
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "7fd5f1c6-1da8-42ab-8b10-df0a6c584a07",
+            "label": "foreground"
+        },
+        {
+            "type": "Layer",
+            "id": "01f00938-e29b-4a47-bc55-0e896b49ee1e",
+            "label": "foreground_2"
         }
     ],
     "plainObjects": [],
