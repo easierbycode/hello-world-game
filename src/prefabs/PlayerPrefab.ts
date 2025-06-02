@@ -70,20 +70,6 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 		if (bottomButton && bottomButton.pressed && this.body.onFloor()) {
 			this.setVelocityY(baseJumpVelocity * jumpMultiplier); // Jump with potential boost
 		}
-
-		// Pause - Start button (typically index 9)
-		const startButton = this.pad.buttons[9];
-		if (startButton && startButton.justPressed) {
-			this.scene.scene.pause();
-			// Optionally, you might want to show a pause menu or overlay here
-			// To resume, you'd need another input or UI element that calls this.scene.scene.resume()
-		}
-
-		// Restart - Select button (typically index 8)
-		const selectButton = this.pad.buttons[8];
-		if (selectButton && selectButton.justPressed) {
-			this.scene.scene.restart();
-		}
 	}
 
 	/* END-USER-CODE */

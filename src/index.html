@@ -17,6 +17,62 @@
 </head>
 
 <body>
+    <script>
+        let prevButtonStates = [];
+        let fullscreenToggled = false; // Flag to ensure fullscreen is toggled only once
+
+        window.addEventListener("gamepadconnected", (e) => {
+            console.log(`Gamepad ${e.gamepad.index} connected`);
+            prevButtonStates[e.gamepad.index] = [];
+            requestAnimationFrame(pollGamepads);
+        });
+
+        function pollGamepads() {
+            const gamepads = navigator.getGamepads();
+            for (let i = 0; i < gamepads.length; i++) {
+                const gp = gamepads[i];
+                if (!gp) continue;
+                if (!prevButtonStates[gp.index]) prevButtonStates[gp.index] = [];
+                gp.buttons.forEach((btn, idx) => {
+                    const prev = prevButtonStates[gp.index][idx] || false;
+                    if (btn.pressed && !prev) {
+                        console.log(`Gamepad ${gp.index} button ${idx} pressed`);
+
+                        // Restart - Select button (typically index 8)
+                        if (idx === 8)  window.scene.scene.restart();
+
+                        // Pause - Start button (typically index 9)
+                        if (idx === 9) {
+                            if (window.scene.scene.isPaused()) {
+                                window.scene.scene.resume();
+                            } else {
+                                window.scene.scene.pause();
+                            }
+                        }
+
+                        // Reload - Left Trigger button (typically index 10)
+                        if (idx === 10)  location.reload();
+
+                        if (!fullscreenToggled) {
+                            if (document.documentElement.requestFullscreen) {
+                                document.documentElement.requestFullscreen();
+                            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                                document.documentElement.mozRequestFullScreen();
+                            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                                document.documentElement.webkitRequestFullscreen();
+                            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                                document.documentElement.msRequestFullscreen();
+                            }
+                            fullscreenToggled = true;
+                            console.log("Fullscreen toggled on first button press.");
+                        }
+                    }
+                    prevButtonStates[gp.index][idx] = btn.pressed;
+                });
+            }
+            requestAnimationFrame(pollGamepads);
+        }
+    </script>
 </body>
 
 </html>

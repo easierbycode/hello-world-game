@@ -17,6 +17,7 @@ export default class Level extends Phaser.Scene {
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
+		window.scene = this;
 		/* END-USER-CTR-CODE */
 	}
 
