@@ -54,9 +54,11 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 			this.setVelocityX(0);
 		}
 
-		if (this.scene.input.activePointer.isDown) {
-
-			this.setVelocityY(-200);
+		// Jump - Bottom face button (e.g., A on Xbox, Cross on PlayStation - typically index 0)
+		// Check if the button is pressed and the player is on the ground.
+		const bottomButton = this.pad.buttons[0];
+		if (bottomButton && bottomButton.pressed && this.body.onFloor()) {
+			this.setVelocityY(-330); // Adjusted jump height, consistent with previous examples
 		}
 	}
 
