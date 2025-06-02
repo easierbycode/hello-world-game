@@ -23,20 +23,7 @@
             "body.height": 320
         }
     ],
-    "plainObjects": [
-        {
-            "id": "70cb9bdb-2f25-4722-b68c-a96240394dc3",
-            "type": "Keyboard.Key",
-            "label": "leftKey",
-            "keyCode": "LEFT"
-        },
-        {
-            "id": "68dbd74d-d992-40d2-8a60-a3f3811b3721",
-            "type": "Keyboard.Key",
-            "label": "rightKey",
-            "keyCode": "RIGHT"
-        }
-    ],
+    "plainObjects": [],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
