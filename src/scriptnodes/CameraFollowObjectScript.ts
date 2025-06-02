@@ -18,16 +18,22 @@ export default class CameraFollowObjectScript extends ScriptNode {
 		/* END-USER-CTR-CODE */
 	}
 
+	public targetGameObject!: Phaser.GameObjects.GameObject;
+	public lerpX: number = 0.5;
+	public lerpY: number = 0.5;
+	public deadZoneWidth: number = 100;
+	public deadZoneHeight: number = 100;
+
 	/* START-USER-CODE */
-	
+
 	/* @type {Phaser.GameObjects.GameObject} */
 	targetGameObject;
 
-	// Write your code here.
-	
+	// Write your code here.s
+
 	awake() {
 		if (!this.scene || !this.targetGameObject)  return;
-		this.scene.cameras.main.startFollow(this.targetGameObject);
+		this.scene.cameras.main.startFollow(this.targetGameObject, true, this.lerpX, this.lerpY).setDeadzone(this.deadZoneWidth, this.deadZoneHeight);
 	}
 
 	/* END-USER-CODE */

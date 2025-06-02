@@ -147,6 +147,11 @@
             ],
             "label": "cameraFollowObjectScript",
             "targetGameObject": "barbarian"
+        },
+        {
+            "prefabId": "68feddc9-a06d-440d-b0fb-9645af6d393b",
+            "id": "b91cc2e4-5c16-4815-85fb-65b22d85f311",
+            "label": "setCameraBoundsScript"
         }
     ],
     "plainObjects": [

@@ -38,7 +38,7 @@ export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 	preUpdate(time: number, delta: number) {
 		super.preUpdate(time, delta);
 
-		if (!this.active)  return;
+		if (!this.active || !this.pad)  return;
 
 		// Check if left button (□ / X) is pressed for speed boost
 		const leftButton = this.pad.buttons[2]; 

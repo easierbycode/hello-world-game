@@ -36,6 +36,46 @@
                 "id": "object-var",
                 "expressionType": "Phaser.GameObjects.GameObject"
             }
+        },
+        {
+            "name": "lerpX",
+            "label": "lerpX",
+            "tooltip": "",
+            "defValue": 0.5,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        },
+        {
+            "name": "lerpY",
+            "label": "lerpY",
+            "tooltip": "",
+            "defValue": 0.5,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        },
+        {
+            "name": "deadZoneWidth",
+            "label": "deadZoneWidth",
+            "tooltip": "",
+            "defValue": 100,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        },
+        {
+            "name": "deadZoneHeight",
+            "label": "deadZoneHeight",
+            "tooltip": "",
+            "defValue": 100,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
         }
     ]
 }
