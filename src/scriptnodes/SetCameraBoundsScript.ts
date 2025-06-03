@@ -18,13 +18,18 @@ export default class SetCameraBoundsScript extends ScriptNode {
 		/* END-USER-CTR-CODE */
 	}
 
+	public x: number = 0;
+	public y: number = 0;
+	public width: number = 8640;
+	public height: number = 224;
+
 	/* START-USER-CODE */
 
 	// Write your code here.
-	
+
 	awake() {
 		if (!this.scene)  return;
-		this.scene.cameras.main.setBounds(0, 0, this.scene.scale.width * 3, this.scene.scale.height);
+		this.scene.cameras.main.setBounds(this.x, this.y, this.width, this.height);
 	}
 
 	/* END-USER-CODE */
