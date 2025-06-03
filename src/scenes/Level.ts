@@ -8,6 +8,7 @@ import PlayerPrefab from "../prefabs/PlayerPrefab";
 import CameraFollowObjectScript from "../scriptnodes/CameraFollowObjectScript";
 import SetCameraBoundsScript from "../scriptnodes/SetCameraBoundsScript";
 /* START-USER-IMPORTS */
+import FadeCameraScript from "../scriptnodes/FadeCameraScript";
 /* END-USER-IMPORTS */
 
 export default class Level extends Phaser.Scene {
@@ -54,6 +55,9 @@ export default class Level extends Phaser.Scene {
 	// Write your code here
 
 	create() {
+		// fadeCameraScript
+		new FadeCameraScript(this);
+
 		// background
 		this.backgroundLayer = this.add.layer();
 		
