@@ -9,6 +9,8 @@ import Phaser from "phaser";
 export default interface PlayerPrefab {
 
 	 body: Phaser.Physics.Arcade.Body;
+	 pad: Phaser.Input.Gamepad.Gamepad | undefined;
+	 
 }
 
 export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
