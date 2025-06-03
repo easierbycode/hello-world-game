@@ -1,4 +1,3 @@
-
 // You can write more code here
 
 /* START OF COMPILED CODE */
@@ -25,9 +24,6 @@ export default class CameraFollowObjectScript extends ScriptNode {
 	public deadZoneHeight: number = 100;
 
 	/* START-USER-CODE */
-
-	/* @type {Phaser.GameObjects.GameObject} */
-	targetGameObject;
 
 	// Write your code here.s
 

@@ -12,6 +12,10 @@ import SetCameraBoundsScript from "../scriptnodes/SetCameraBoundsScript";
 
 export default class Level extends Phaser.Scene {
 
+	public barbarian!: PlayerPrefab;
+	public backgroundLayer!: Phaser.GameObjects.Layer;
+	public cameraFollowObjectScript!: CameraFollowObjectScript;
+
 	constructor() {
 		super("Level");
 
@@ -54,7 +58,7 @@ export default class Level extends Phaser.Scene {
 		this.backgroundLayer = this.add.layer();
 		
 		// ground
-		const groundLayer = this.add.layer();
+		const groundLayer = this.add.layer(); // For visual organization
 		
 		// elements
 		this.add.layer();
@@ -91,13 +95,13 @@ export default class Level extends Phaser.Scene {
 		this.barbarian.scaleX = 0.5;
 		this.barbarian.scaleY = 0.5;
 
+		// PlayerPrefab's constructor calls scene.physics.add.existing(this, false),
+		// so why are we calling it again here???
 		// enablePhysicsBodyScript_2
 		new EnablePhysicsBodyScript(this.barbarian);
 
-		// collider
+		// collider for barbarian and all static ground objects
 		this.physics.add.collider(this.barbarian, floor_1);
-
-		// collider_1
 		this.physics.add.collider(this.barbarian, wall);
 		
 		// cameraFollowObjectScript
@@ -117,6 +121,13 @@ export default class Level extends Phaser.Scene {
 	/* END-USER-CODE */
 }
 
+/* END OF COMPILED CODE */
+
+// You can write more code here
+/* END OF COMPILED CODE */
+
+// You can write more code here
+// You can write more code here
 /* END OF COMPILED CODE */
 
 // You can write more code here
