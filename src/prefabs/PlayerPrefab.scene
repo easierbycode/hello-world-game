@@ -19,8 +19,10 @@
             },
             "scaleX": 0.5,
             "scaleY": 0.5,
-            "body.width": 320,
-            "body.height": 320
+            "body.width": 150,
+            "body.height": 210,
+            "body.offset.x": 90,
+            "body.offset.y": 50
         }
     ],
     "plainObjects": [],

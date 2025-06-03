@@ -82,14 +82,9 @@ export default class Level extends Phaser.Scene {
 		new EnablePhysicsBodyScript(wall);
 		
 		// barbarian
-		this.barbarian = new PlayerPrefab(undefined, this, 69, 400);	
+		this.barbarian = new PlayerPrefab(this, 69, 400);	
 		this.barbarian.scaleX = 0.5;
 		this.barbarian.scaleY = 0.5;
-
-		// PlayerPrefab's constructor calls scene.physics.add.existing(this, false),
-		// so why are we calling it again here???
-		// enablePhysicsBodyScript_2
-		new EnablePhysicsBodyScript(this.barbarian);
 
 		// collider for barbarian and all static ground objects
 		this.physics.add.collider(this.barbarian, floor_1);
