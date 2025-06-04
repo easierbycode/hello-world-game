@@ -20,6 +20,11 @@
                 "url": "assets/glassPanel_corners.png",
                 "type": "image",
                 "key": "panel"
+            },
+            {
+                "url": "assets/tileset.png",
+                "type": "image",
+                "key": "tileset"
             }
         ]
     },
