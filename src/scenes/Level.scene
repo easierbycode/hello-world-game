@@ -9,8 +9,8 @@
         "createMethodName": "editorCreate",
         "sceneKey": "Level",
         "compilerOutputLanguage": "TYPE_SCRIPT",
-        "borderWidth": 1280,
-        "borderHeight": 800
+        "borderWidth": 358,
+        "borderHeight": 224
     },
     "displayList": [
         {
@@ -25,9 +25,6 @@
                     "texture": {
                         "key": "ForgottenWorlds-Stage1"
                     },
-                    "y": 152,
-                    "scaleX": 2,
-                    "scaleY": 2,
                     "originX": 0,
                     "originY": 0,
                     "width": 8640,
@@ -40,58 +37,10 @@
                     "texture": {
                         "key": "FufuSuperDino"
                     },
-                    "x": 1017,
-                    "y": 449
-                }
-            ]
-        },
-        {
-            "type": "Layer",
-            "id": "4f540103-edab-4f2c-a83c-1674ce9b09d3",
-            "label": "ground",
-            "list": [
-                {
-                    "type": "Rectangle",
-                    "id": "6806e651-b0ac-4ae9-9220-ef014fa3373f",
-                    "label": "floor_1",
-                    "y": 569,
-                    "scaleY": 0.2235006528202375,
-                    "originX": 0,
-                    "originY": 0,
-                    "visible": false,
-                    "isFilled": true,
-                    "fillColor": "#2e063a",
-                    "strokeColor": "#000",
-                    "width": 1280,
-                    "height": 96,
-                    "list": [
-                        {
-                            "prefabId": "625e78db-c078-46d2-98a7-cb0b8f1ae03c",
-                            "id": "8056a4f7-330c-41fc-9182-8f8092b75f55",
-                            "label": "enablePhysicsBodyScript"
-                        }
-                    ]
-                },
-                {
-                    "type": "Rectangle",
-                    "id": "7c9f7c0b-b3eb-48ee-9b05-8323805ba955",
-                    "label": "wall",
-                    "y": 150,
-                    "originX": 0,
-                    "originY": 0,
-                    "visible": false,
-                    "isFilled": true,
-                    "fillColor": "#2e063a",
-                    "strokeColor": "#000",
-                    "width": 32,
-                    "height": 416,
-                    "list": [
-                        {
-                            "prefabId": "625e78db-c078-46d2-98a7-cb0b8f1ae03c",
-                            "id": "8608457b-5e62-47fe-88fe-989d314c6c69",
-                            "label": "enablePhysicsBodyScript_1"
-                        }
-                    ]
+                    "x": 650,
+                    "y": 160,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5
                 }
             ]
         },
@@ -116,7 +65,7 @@
                     ],
                     "label": "barbarian",
                     "x": 69,
-                    "y": 400,
+                    "y": 125,
                     "scaleX": 0.5,
                     "scaleY": 0.5,
                     "list": [
@@ -140,13 +89,14 @@
             "label": "foreground_2"
         },
         {
-            "prefabId": "490fee92-ec98-4539-b0e0-2d6ae6045bad",
-            "id": "6f1edb50-dd1d-44f3-846a-5c1043f7e7be",
-            "unlock": [
-                "targetGameObject"
-            ],
-            "label": "cameraFollowObjectScript",
-            "targetGameObject": "barbarian"
+            "type": "TilemapLayer",
+            "id": "515fbde9-61dc-44cf-ae7b-a60596a609b2",
+            "label": "ground_1",
+            "tilemapId": "7588ad0d-2273-403d-a66e-9419162d946b",
+            "layerName": "ground",
+            "tilesets": [
+                "tileset"
+            ]
         },
         {
             "prefabId": "68feddc9-a06d-440d-b0fb-9645af6d393b",
@@ -157,24 +107,37 @@
             "prefabId": "98a7e97d-c16b-4e92-8f2c-326a0514b5e6",
             "id": "9e6b8be8-ba00-4538-9e7e-b376f1c72953",
             "label": "fadeCameraScript"
+        },
+        {
+            "prefabId": "490fee92-ec98-4539-b0e0-2d6ae6045bad",
+            "id": "6f1edb50-dd1d-44f3-846a-5c1043f7e7be",
+            "unlock": [
+                "targetGameObject"
+            ],
+            "label": "cameraFollowObjectScript",
+            "targetGameObject": "barbarian"
         }
     ],
     "plainObjects": [
         {
-            "id": "7649e86c-516b-423a-88c2-8b6a379de10c",
+            "id": "7588ad0d-2273-403d-a66e-9419162d946b",
+            "type": "Tilemap",
+            "label": "map",
+            "key": "map",
+            "tilesets": [
+                {
+                    "name": "tileset",
+                    "imageKey": "tileset"
+                }
+            ]
+        },
+        {
+            "id": "14c53861-5aab-4d35-b945-33eae20caf56",
             "type": "Collider",
             "label": "collider",
             "scope": "LOCAL",
             "object1": "barbarian",
-            "object2": "floor_1"
-        },
-        {
-            "id": "72983755-5844-4f87-9043-2422f51af3a8",
-            "type": "Collider",
-            "label": "collider_1",
-            "scope": "LOCAL",
-            "object1": "barbarian",
-            "object2": "wall"
+            "object2": "ground_1"
         }
     ],
     "meta": {

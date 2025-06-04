@@ -17,6 +17,11 @@
                 "key": "FufuSuperDino"
             },
             {
+                "url": "assets/map.json",
+                "type": "tilemapTiledJSON",
+                "key": "map"
+            },
+            {
                 "url": "assets/glassPanel_corners.png",
                 "type": "image",
                 "key": "panel"

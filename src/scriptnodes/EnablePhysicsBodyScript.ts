@@ -19,12 +19,15 @@ export default class EnablePhysicsBodyScript extends ScriptNode {
 
 	/* START-USER-CODE */
 
+	public isStatic: boolean = false; // Default to dynamic. Set to true for static bodies.
+
 	// Write your code here.
 	
 	awake() {
 		if (!this.gameObject)  return;
 		
-		this.gameObject.scene.physics.add.existing(this.gameObject, true);
+		// Use the isStatic property to determine if the body should be static or dynamic
+		this.gameObject.scene.physics.add.existing(this.gameObject, this.isStatic);
 	}
 
 	/* END-USER-CODE */
