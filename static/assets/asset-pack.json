@@ -2,9 +2,27 @@
     "section1": {
         "files": [
             {
+                "url": "assets/animations.json",
+                "type": "animation",
+                "key": "animations"
+            },
+            {
                 "url": "assets/barbarian.png",
                 "type": "image",
                 "key": "barbarian"
+            },
+            {
+                "url": "assets/enemy.png",
+                "frameConfig": {
+                    "frameWidth": 24,
+                    "frameHeight": 26,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "enemy"
             },
             {
                 "url": "assets/ForgottenWorlds-Stage1.png",
@@ -25,6 +43,19 @@
                 "url": "assets/glassPanel_corners.png",
                 "type": "image",
                 "key": "panel"
+            },
+            {
+                "url": "assets/player.png",
+                "frameConfig": {
+                    "frameWidth": 28,
+                    "frameHeight": 28,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 1
+                },
+                "type": "spritesheet",
+                "key": "player"
             },
             {
                 "url": "assets/tileset.png",
