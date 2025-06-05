@@ -29,18 +29,6 @@
                     "originY": 0,
                     "width": 8640,
                     "height": 224
-                },
-                {
-                    "type": "Sprite",
-                    "id": "7e17d761-da9e-4518-a066-0a5dde189282",
-                    "label": "fufuSuperDino",
-                    "texture": {
-                        "key": "FufuSuperDino"
-                    },
-                    "x": 650,
-                    "y": 160,
-                    "scaleX": 0.5,
-                    "scaleY": 0.5
                 }
             ]
         },
@@ -56,31 +44,15 @@
             "list": [
                 {
                     "prefabId": "bd507dd5-57e0-4847-8bb7-b2b1404b6751",
-                    "id": "6bc238bc-1271-4c20-b080-f31aa0ffd1be",
+                    "id": "f2c4e335-8edc-4f9b-bbe6-f0b7a2425b97",
                     "unlock": [
                         "x",
-                        "y",
-                        "scaleX",
-                        "scaleY",
-                        "texture"
+                        "y"
                     ],
                     "label": "barbarian",
                     "scope": "PUBLIC",
-                    "texture": {
-                        "key": "player",
-                        "frame": 0
-                    },
-                    "x": 69,
-                    "y": 125,
-                    "scaleX": 0.5,
-                    "scaleY": 0.5,
-                    "list": [
-                        {
-                            "prefabId": "625e78db-c078-46d2-98a7-cb0b8f1ae03c",
-                            "id": "13de9adb-381f-484f-8ecb-1e5fdb14e699",
-                            "label": "enablePhysicsBodyScript_2"
-                        }
-                    ]
+                    "x": 64,
+                    "y": 192
                 }
             ]
         },

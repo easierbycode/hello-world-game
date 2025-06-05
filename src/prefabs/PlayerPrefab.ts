@@ -9,20 +9,15 @@ import Phaser from "phaser";
 export default interface PlayerPrefab {
 
 	 body: Phaser.Physics.Arcade.Body;
-	 pad: Phaser.Input.Gamepad.Gamepad | undefined;
-	 
 }
 
 export default class PlayerPrefab extends Phaser.Physics.Arcade.Sprite {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x ?? 0, y ?? 0, texture || "barbarian", frame);
+		super(scene, x ?? 0, y ?? 0, texture || "player", frame ?? 0);
 
-		this.scaleX = 0.5;
-		this.scaleY = 0.5;
 		scene.physics.add.existing(this, false);
-		this.body.setOffset(90, 50);
-		this.body.setSize(150, 210, false);
+		this.body.setSize(28, 28, false);
 
 		/* START-USER-CTR-CODE */
 		/* END-USER-CTR-CODE */

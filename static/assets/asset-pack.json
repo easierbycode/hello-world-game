@@ -7,11 +7,6 @@
                 "key": "animations"
             },
             {
-                "url": "assets/barbarian.png",
-                "type": "image",
-                "key": "barbarian"
-            },
-            {
                 "url": "assets/enemy.png",
                 "frameConfig": {
                     "frameWidth": 24,
@@ -28,11 +23,6 @@
                 "url": "assets/ForgottenWorlds-Stage1.png",
                 "type": "image",
                 "key": "ForgottenWorlds-Stage1"
-            },
-            {
-                "url": "assets/FufuSuperDino.png",
-                "type": "image",
-                "key": "FufuSuperDino"
             },
             {
                 "url": "assets/map.json",

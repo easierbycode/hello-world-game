@@ -4,7 +4,6 @@
 
 import Phaser from "phaser";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
-import EnablePhysicsBodyScript from "../scriptnodes/EnablePhysicsBodyScript";
 import FadeCameraScript from "../scriptnodes/FadeCameraScript";
 import CameraFollowObjectScript from "../scriptnodes/CameraFollowObjectScript";
 import SetCameraBoundsScript from "../scriptnodes/SetCameraBoundsScript";
@@ -37,12 +36,6 @@ export default class Level extends Phaser.Scene {
 		tilesprite_1.setOrigin(0, 0);
 		background.add(tilesprite_1);
 
-		// fufuSuperDino
-		const fufuSuperDino = this.add.sprite(650, 160, "FufuSuperDino");
-		fufuSuperDino.scaleX = 0.5;
-		fufuSuperDino.scaleY = 0.5;
-		background.add(fufuSuperDino);
-
 		// elements
 		this.add.layer();
 
@@ -50,13 +43,8 @@ export default class Level extends Phaser.Scene {
 		const hero = this.add.layer();
 
 		// barbarian
-		const barbarian = new PlayerPrefab(this, 69, 125);
-		barbarian.scaleX = 0.5;
-		barbarian.scaleY = 0.5;
+		const barbarian = new PlayerPrefab(this, 64, 192);
 		hero.add(barbarian);
-
-		// enablePhysicsBodyScript_2
-		new EnablePhysicsBodyScript(barbarian);
 
 		// foreground
 		this.add.layer();

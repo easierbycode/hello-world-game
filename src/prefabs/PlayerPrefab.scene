@@ -15,14 +15,11 @@
             "id": "9ccab3c2-9904-439f-8823-15e87df71a58",
             "label": "barbarian",
             "texture": {
-                "key": "barbarian"
+                "key": "player",
+                "frame": 0
             },
-            "scaleX": 0.5,
-            "scaleY": 0.5,
-            "body.width": 150,
-            "body.height": 210,
-            "body.offset.x": 90,
-            "body.offset.y": 50
+            "body.width": 28,
+            "body.height": 28
         }
     ],
     "plainObjects": [],
