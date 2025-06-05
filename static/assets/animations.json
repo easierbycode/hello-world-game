@@ -55,6 +55,92 @@
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
+        },
+        {
+            "key": "blanka_idle",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "blanka_0",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_1",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 6,
+            "skipMissedFrames": true,
+            "repeat": -1,
+            "randomFrame": false
+        },
+        {
+            "key": "blanka_attack",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "blanka_0",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_3",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_4",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_5",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_6",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_7",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_8",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_9",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_10",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "blanka_1",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 36,
+            "skipMissedFrames": true,
+            "repeat": -1,
+            "repeatDelay": 300,
+            "randomFrame": false
         }
     ],
     "globalTimeScale": 1,

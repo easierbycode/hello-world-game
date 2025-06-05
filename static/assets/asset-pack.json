@@ -7,6 +7,61 @@
                 "key": "animations"
             },
             {
+                "url": "assets/blanka_0.png",
+                "type": "image",
+                "key": "blanka_0"
+            },
+            {
+                "url": "assets/blanka_1.png",
+                "type": "image",
+                "key": "blanka_1"
+            },
+            {
+                "url": "assets/blanka_10.png",
+                "type": "image",
+                "key": "blanka_10"
+            },
+            {
+                "url": "assets/blanka_2.png",
+                "type": "image",
+                "key": "blanka_2"
+            },
+            {
+                "url": "assets/blanka_3.png",
+                "type": "image",
+                "key": "blanka_3"
+            },
+            {
+                "url": "assets/blanka_4.png",
+                "type": "image",
+                "key": "blanka_4"
+            },
+            {
+                "url": "assets/blanka_5.png",
+                "type": "image",
+                "key": "blanka_5"
+            },
+            {
+                "url": "assets/blanka_6.png",
+                "type": "image",
+                "key": "blanka_6"
+            },
+            {
+                "url": "assets/blanka_7.png",
+                "type": "image",
+                "key": "blanka_7"
+            },
+            {
+                "url": "assets/blanka_8.png",
+                "type": "image",
+                "key": "blanka_8"
+            },
+            {
+                "url": "assets/blanka_9.png",
+                "type": "image",
+                "key": "blanka_9"
+            },
+            {
                 "url": "assets/enemy.png",
                 "frameConfig": {
                     "frameWidth": 24,
