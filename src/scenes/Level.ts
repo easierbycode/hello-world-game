@@ -5,21 +5,14 @@
 import Phaser from "phaser";
 import PlayerPrefab from "../prefabs/PlayerPrefab";
 import EnablePhysicsBodyScript from "../scriptnodes/EnablePhysicsBodyScript";
-import SetCameraBoundsScript from "../scriptnodes/SetCameraBoundsScript";
 import FadeCameraScript from "../scriptnodes/FadeCameraScript";
 import CameraFollowObjectScript from "../scriptnodes/CameraFollowObjectScript";
+import SetCameraBoundsScript from "../scriptnodes/SetCameraBoundsScript";
 /* START-USER-IMPORTS */
 import FadeCameraScript from "../scriptnodes/FadeCameraScript";
 /* END-USER-IMPORTS */
 
 export default class Level extends Phaser.Scene {
-
-	public barbarian!: PlayerPrefab; // Will be assigned from editorCreate
-	public backgroundLayer!: Phaser.GameObjects.Layer; // Assigned in create
-	public cameraFollowObjectScript!: CameraFollowObjectScript; // Assigned in create
-	private map!: Phaser.Tilemaps.Tilemap;
-	private ground_1!: Phaser.Tilemaps.TilemapLayer; // Assigned in editorCreate
-
 
 	constructor() {
 		super("Level");
@@ -57,14 +50,12 @@ export default class Level extends Phaser.Scene {
 		const hero = this.add.layer();
 
 		// barbarian
-		// Corrected PlayerPrefab constructor: (pad, scene, x, y)
 		const barbarian = new PlayerPrefab(this, 69, 125);
 		barbarian.scaleX = 0.5;
 		barbarian.scaleY = 0.5;
 		hero.add(barbarian);
 
 		// enablePhysicsBodyScript_2
-		// This will now correctly make the barbarian dynamic by default
 		new EnablePhysicsBodyScript(barbarian);
 
 		// foreground
@@ -74,10 +65,10 @@ export default class Level extends Phaser.Scene {
 		this.add.layer();
 
 		// ground_1
-		this.ground_1 = map.createLayer("ground", ["tileset"], 0, 0);
+		const ground_1 = map.createLayer("ground", ["tileset"], 0, 0)!;
 
-		// setCameraBoundsScript
-		new SetCameraBoundsScript(this);
+		// sprite_1
+		this.add.sprite(336, 96, "enemy", 0);
 
 		// fadeCameraScript
 		new FadeCameraScript(this);
@@ -85,14 +76,22 @@ export default class Level extends Phaser.Scene {
 		// cameraFollowObjectScript
 		const cameraFollowObjectScript = new CameraFollowObjectScript(this);
 
+		// setCameraBoundsScript
+		new SetCameraBoundsScript(this);
+
 		// cameraFollowObjectScript (prefab fields)
 		cameraFollowObjectScript.targetGameObject = barbarian;
 
+		this.barbarian = barbarian;
+		this.ground_1 = ground_1;
 		this.map = map;
-		this.barbarian = barbarian; // Assign the editor-created barbarian to the class property
 
 		this.events.emit("scene-awake");
 	}
+
+	public barbarian!: PlayerPrefab;
+	public ground_1!: Phaser.Tilemaps.TilemapLayer;
+	private map!: Phaser.Tilemaps.Tilemap;
 
 	/* START-USER-CODE */
 
@@ -115,7 +114,7 @@ export default class Level extends Phaser.Scene {
 
 		// barbarian - Instance is now created and assigned in editorCreate()
 		// this.barbarian = new PlayerPrefab(this, 69, 400); // REMOVED redundant creation
-		
+
 		// Ensure barbarian is added to a relevant layer if not already handled by editorCreate's hero.add(barbarian)
 		// If hero layer from editorCreate is not the same as heroLayer here, adjust accordingly.
 		// For simplicity, assuming barbarian from editorCreate is already on a layer.

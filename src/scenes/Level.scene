@@ -64,6 +64,7 @@
                         "scaleY"
                     ],
                     "label": "barbarian",
+                    "scope": "PUBLIC",
                     "x": 69,
                     "y": 125,
                     "scaleX": 0.5,
@@ -92,6 +93,7 @@
             "type": "TilemapLayer",
             "id": "515fbde9-61dc-44cf-ae7b-a60596a609b2",
             "label": "ground_1",
+            "scope": "PUBLIC",
             "tilemapId": "7588ad0d-2273-403d-a66e-9419162d946b",
             "layerName": "ground",
             "tilesets": [
@@ -99,9 +101,15 @@
             ]
         },
         {
-            "prefabId": "68feddc9-a06d-440d-b0fb-9645af6d393b",
-            "id": "b91cc2e4-5c16-4815-85fb-65b22d85f311",
-            "label": "setCameraBoundsScript"
+            "type": "Sprite",
+            "id": "e77d2d96-b62b-4c4d-99ab-48ce74231280",
+            "label": "sprite_1",
+            "texture": {
+                "key": "enemy",
+                "frame": 0
+            },
+            "x": 336,
+            "y": 96
         },
         {
             "prefabId": "98a7e97d-c16b-4e92-8f2c-326a0514b5e6",
@@ -116,6 +124,11 @@
             ],
             "label": "cameraFollowObjectScript",
             "targetGameObject": "barbarian"
+        },
+        {
+            "prefabId": "68feddc9-a06d-440d-b0fb-9645af6d393b",
+            "id": "b91cc2e4-5c16-4815-85fb-65b22d85f311",
+            "label": "setCameraBoundsScript"
         }
     ],
     "plainObjects": [
@@ -130,14 +143,6 @@
                     "imageKey": "tileset"
                 }
             ]
-        },
-        {
-            "id": "14c53861-5aab-4d35-b945-33eae20caf56",
-            "type": "Collider",
-            "label": "collider",
-            "scope": "LOCAL",
-            "object1": "barbarian",
-            "object2": "ground_1"
         }
     ],
     "meta": {
