@@ -61,10 +61,15 @@
                         "x",
                         "y",
                         "scaleX",
-                        "scaleY"
+                        "scaleY",
+                        "texture"
                     ],
                     "label": "barbarian",
                     "scope": "PUBLIC",
+                    "texture": {
+                        "key": "player",
+                        "frame": 0
+                    },
                     "x": 69,
                     "y": 125,
                     "scaleX": 0.5,
@@ -109,7 +114,9 @@
                 "frame": 0
             },
             "x": 336,
-            "y": 96
+            "y": 96,
+            "animationPlayMethod": 1,
+            "animationKey": "enemy_fly"
         },
         {
             "prefabId": "98a7e97d-c16b-4e92-8f2c-326a0514b5e6",

@@ -68,7 +68,8 @@ export default class Level extends Phaser.Scene {
 		const ground_1 = map.createLayer("ground", ["tileset"], 0, 0)!;
 
 		// sprite_1
-		this.add.sprite(336, 96, "enemy", 0);
+		const sprite_1 = this.add.sprite(336, 96, "enemy", 0);
+		sprite_1.play("enemy_fly");
 
 		// fadeCameraScript
 		new FadeCameraScript(this);
